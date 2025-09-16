@@ -1,0 +1,7 @@
+services:
+  songseeker-card-generator:
+    build: .
+    volumes:
+      - ${INPUT_FILE}:/app/input.csv:ro
+      - ${OUTPUT_DIR}:/app/output
+    command: ["/app/input.csv", "/app/output/output.pdf"]
